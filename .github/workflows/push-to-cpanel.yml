@@ -23,4 +23,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /home/itclanho/dev.itclanhost.com
-          ls -la
+          git pull
+          php -r "file_exists('.env') || copy('.env.example', '.env');"
+          composer install
+          php artisan key:generate
