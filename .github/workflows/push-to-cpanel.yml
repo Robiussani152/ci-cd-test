@@ -22,4 +22,5 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          whoiam
+          cd /home/itclanho/dev.itclanhost.com
+          ls -la
